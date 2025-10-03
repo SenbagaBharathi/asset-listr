@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { supabase, Property } from '@/lib/supabase';
+import { supabase } from '@/integrations/supabase/client';
+import { Property } from '@/types/property';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
