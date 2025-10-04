@@ -46,7 +46,7 @@ const Dashboard = () => {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setProperties(data || []);
+      setProperties((data as Property[]) || []);
     } catch (error: any) {
       toast({
         title: 'Error',
