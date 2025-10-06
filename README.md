@@ -1,73 +1,71 @@
-# Welcome to my project
+# 🏠 Asset-Listr — Simplified Project Brief
 
-## Project info
+## 📋 Overview
+**Asset-Listr** is a modern full-stack web app for real estate property management.  
+It allows users to **browse, add, edit, and manage property listings** easily.  
+The goal is to make property listing **simple, secure, and fast** for both agents and clients.
 
-**URL**: https://lovable.dev/projects/85e9cbb2-37e1-44c5-beeb-d5d72212ef4c
+---
 
-## How can I edit this code?
+## 🎯 Purpose
+To create a **user-friendly** platform for:
+- Real estate agents to manage listings  
+- Buyers/sellers to browse properties  
+- Ensuring secure access and smooth experience  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🧠 Tech Stack
+| Layer | Technologies Used |
+|-------|--------------------|
+| **Frontend** | React + TypeScript + Tailwind CSS + shadcn/ui |
+| **Backend** | Supabase (via Lovable Cloud) |
+| **Database** | PostgreSQL with Row Level Security (RLS) |
+| **Auth** | Supabase Authentication (email/password) |
+| **Build Tool** | Vite |
+| **Version Control** | GitHub with CI/CD (Lovable Cloud Deploy) |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/85e9cbb2-37e1-44c5-beeb-d5d72212ef4c) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🏗️ Architecture
+The app follows a **client-server model**:  
+- The **React frontend** communicates with the **Supabase backend** through REST APIs.  
+- Data is stored in **PostgreSQL**, protected with **RLS**, so each user sees only their own data.  
+- The frontend uses **TypeScript** for type safety and **Tailwind** for responsive UI.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✨ Core Features
+1. 🔐 User Authentication (Login, Register, Logout)  
+2. 🏡 Add, Edit, Delete Property Listings  
+3. 📊 Dashboard with personalized data  
+4. 💬 Responsive UI with clean components (shadcn/ui)  
+5. ⚡ Real-time property updates via Supabase APIs  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🗄️ Database Schema
+**Table: `properties`**
+| Column | Type | Description |
+|--------|------|-------------|
+| id | UUID | Primary Key |
+| user_id | UUID | Linked to authenticated user |
+| title | TEXT | Property Title |
+| price | DECIMAL | Price of the property |
+| location | TEXT | Property Location |
+| property_type | TEXT | Type (Apartment, Villa, Plot) |
+| bedrooms | INT | No. of Bedrooms |
+| area_sqft | INT | Area in sq.ft |
+| image_url | TEXT | Property Image |
+| created_at | TIMESTAMP | Creation Time |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/85e9cbb2-37e1-44c5-beeb-d5d72212ef4c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## ☁️ Deployment
+- **Hosted on:** Lovable Cloud  
+- **Automatic Deployments:** Enabled with GitHub sync  
+- **Security:** SSL + HTTPS  
+- **Environment Variables:**
+  ```env
+  VITE_SUPABASE_URL=your_supabase_url
+  VITE_SUPABASE_ANON_KEY=your_anon_key
