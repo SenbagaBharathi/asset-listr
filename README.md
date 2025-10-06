@@ -68,4 +68,5 @@ The app follows a **client-server model**:
 - **Environment Variables:**
   ```env
   VITE_SUPABASE_URL="https://kxyknohzmxrtxfaqorqc.supabase.co"
-  VITE_SUPABASE_ANON_KEY=your_anon_key
+  VITE_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4eWtub2h6bXhydHhmYXFvcnFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTM4MzgsImV4cCI6MjA3NDk4OTgzOH0._wv9GtWSKl29rC0xiXIDj6U1TWxqMbrS2mc5iFc4vgg"
+
