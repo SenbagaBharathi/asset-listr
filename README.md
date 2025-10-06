@@ -67,5 +67,5 @@ The app follows a **client-server model**:
 - **Security:** SSL + HTTPS  
 - **Environment Variables:**
   ```env
-  VITE_SUPABASE_URL=your_supabase_url
+  VITE_SUPABASE_URL="https://kxyknohzmxrtxfaqorqc.supabase.co"
   VITE_SUPABASE_ANON_KEY=your_anon_key
